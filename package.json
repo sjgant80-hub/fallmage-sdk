@@ -1,0 +1,21 @@
+{
+  "name": "@ai-native-solutions/fallmage-sdk",
+  "version": "1.0.0",
+  "description": "Sovereign image-editor primitives: canvas presets, filter library, layer/document model, Ω autopilot router, composite/export helpers. Extracted from fallmage.",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node -e \"import('./src/index.js').then(m=>{console.log('presets',Object.keys(m.PRESETS).length,'filters',Object.keys(m.FILTERS).length);const d=m.newDoc(800,600);console.log('doc',d.w,d.h);console.log('route',m.omegaRoute('make it pop').filter);console.log('route',m.omegaRoute('instagram square').preset);console.log('route',m.omegaRoute('crop to 500x500'));})\""
+  },
+  "keywords": ["image-editor", "canvas", "filters", "sovereign", "photoshop", "fallmage"],
+  "license": "MIT",
+  "author": "AI-Native Solutions",
+  "homepage": "https://sjgant80-hub.github.io/fallmage-sdk",
+  "repository": { "type": "git", "url": "https://github.com/sjgant80-hub/fallmage-sdk.git" },
+  "publishConfig": { "access": "public" }
+}
